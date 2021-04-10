@@ -30,6 +30,8 @@ CREATE TABLE `users` (
   `id` int(10) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `idx_users_email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
