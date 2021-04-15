@@ -23,6 +23,8 @@ $username = trim($_POST["username"]);
             // Attempt to execute the prepared statement
             if($stmt->execute()){
                 // Redirect to login page
+           //var_dump($stmt);
+
                 header("location: login.php");
             } else{
                 echo "Something went wrong. Please try again later.";

@@ -1,3 +1,18 @@
+<?php
+
+session_start();
+if (isset($_SESSION['user'])) {
+  header("Location: profile.php");
+  exit();
+}
+
+$form_values = $_SESSION['form_values']?? null;
+
+//clear the form values
+unset($_SESSION['form_values']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
